@@ -1,0 +1,41 @@
+.avatar {
+  width: 48px;
+  margin-right: 15px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+  /* .&:not(:last-child) {
+    margin-bottom: 15px;
+  } */
+}
+
+.item:last-child {
+  margin-bottom: 0px;
+}
+
+.name {
+  font-weight: 400;
+}
+
+.status {
+  width: 10px;
+  height: 10px;
+  margin-right: 15px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.online {
+  composes: status;
+  background-color: green;
+}
+
+.offline {
+  composes: status;
+  background-color: red;
+}
