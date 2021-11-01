@@ -1,3 +1,5 @@
+import React, { Fragment } from 'react';
+
 import './App.css';
 import Profile from './components/Profile/Profile';
 import Statistics from './components/Statistics/Statistics';
@@ -12,7 +14,7 @@ import transactions from './data/transactions.json';
 
 function App() {
   return (
-    <div>
+    <Fragment>
       <Profile
         name={user.name}
         tag={user.tag}
@@ -24,7 +26,7 @@ function App() {
       <Statistics stats={statisticalData} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
-    </div>
+    </Fragment>
   );
 }
 

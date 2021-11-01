@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
+import getColor from '../../helpers';
 
 export default function Statistics({ title, stats }) {
   return (
@@ -22,7 +23,6 @@ export default function Statistics({ title, stats }) {
 }
 
 Statistics.propTypes = {
-  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
@@ -32,12 +32,6 @@ Statistics.propTypes = {
   ),
 };
 
-function getColor() {
-  let r = Math.floor(Math.random() * 256);
-  let g = Math.floor(Math.random() * 256);
-  let b = Math.floor(Math.random() * 256);
-  let color = '#' + r.toString(16) + g.toString(16) + b.toString(16);
-  return color;
-}
-
-console.log(getColor());
+Statistics.defaultProps = {
+  title: '',
+};
